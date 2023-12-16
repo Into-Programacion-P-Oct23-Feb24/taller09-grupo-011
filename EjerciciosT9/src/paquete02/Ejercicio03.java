@@ -21,6 +21,7 @@ public class Ejercicio03 {
         double suma = 0;
         int contador = 0;
         int contador2 = 0;
+        int contador3 = 0;
         double mediaAritmetica;
         for (int i = 0; i < arreglo.length; i++) {
             suma = suma + arreglo[i];
@@ -30,10 +31,15 @@ public class Ejercicio03 {
         for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i] < mediaAritmetica) {
                 contador2 = contador2 + 1;
+            } else {
+                if (arreglo[i] > mediaAritmetica) {
+                    contador3 = contador3 + 1;
+                }
             }
         }
         System.out.printf("Elementos por debajo de la media Aritmetica: "
-                + "%d\n", contador2);
+                + "%d\nElementos por debajo de la media Aritmetica: %d\n",
+                contador3, contador2);
     }
 
 }
